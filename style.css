@@ -44,11 +44,23 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 15px 30px 0;
+    padding: 30px 15px 30px 15px;
 }
 
-.header__logo {
-    padding-left: 20px;
+.header.fixed {
+    position: fixed;
+    height: 90px;
+
+    background-color: #e9e6e3;
+}
+
+.header.fixed .header__inner {
+    padding: 8px 30px 0px 30px;
+}
+
+.header.fixed .header__image {
+    width: 71px;
+    height: 74px;
 }
 
 /* Nav
@@ -184,14 +196,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Motivation
 ========================*/
-.motivation {
-    padding: 40px 0 60px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .motivation__inner {
+    padding: 40px 0 60px 0;
     width: 100%;
     max-width: 750px;
     margin: 0 auto;
@@ -723,8 +729,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .burger__item {
     display: block;
-    width: 35px;
-    height: 4px;
+    width: 39px;
+    height: 5px;
 
     background-color: #e2a355;
 
@@ -733,7 +739,7 @@ h1, h2, h3, h4, h5, h6 {
 
     position: relative;
 
-    
+    border-radius: 10px;
 }
 
 .burger__item:before,
@@ -747,14 +753,15 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     left: 0;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .burger__item:before {
-    top: -9px;
+    top: -10px;
 }
 
 .burger__item:after {
-    bottom: -9px;
+    bottom: -10px;
 }
 
 
@@ -801,13 +808,37 @@ h1, h2, h3, h4, h5, h6 {
 
     /*nav*/
     .nav {
-        display: none;
+        display: none; 
+        width: 100%;
+        flex-direction: column;
+
+        background-color: #e2a355;
+        text-align: right;
+
+        position: absolute;
+        top: 100%;
+        right: 0;  
+       
+    }
+
+    .nav.show {
+        display: flex;
+        border-radius: 3px;
+    }
+
+    .nav__link {
+        padding: 9px 15px;
     }
 
 
     /*burger*/
     .burger {
         display: block;
+    }
+
+    /* header */
+    .header.fixed .header__inner {
+        padding: 8px 50px 0px 50px;
     }
 
 
@@ -989,6 +1020,21 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 767px) { 
 
+    /* header */
+    .header.fixed {
+        height: 80px;
+    }
+    
+    .header.fixed .header__inner {
+        padding: 8px 40px 0px 40px;
+    }
+    
+    .header.fixed .header__image {
+        width: 61px;
+        height: 64px;
+    }
+
+
     /*intro*/
     .intro__title {
         font-size: 60px;
@@ -1087,6 +1133,26 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 575px) { 
 
+    /* header */
+    .header__image {
+        width: 81px;
+        height: 84px;
+    }
+
+    .header.fixed {
+        height: 70px;
+    }
+    
+    .header.fixed .header__inner {
+        padding: 8px 30px 0px 30px;
+    }
+    
+    .header.fixed .header__image {
+        width: 51px;
+        height: 54px;
+    }
+
+
     /*intro*/
     .intro {
         height: 750px;
@@ -1110,6 +1176,7 @@ h1, h2, h3, h4, h5, h6 {
     /*motivation*/
     .motivation__title {
         font-size: 50px;
+        margin-bottom: 10px;
     }
 
     .motivation__subtitle {
@@ -1249,7 +1316,6 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 10px;
     }
 }
-
 
 
 
