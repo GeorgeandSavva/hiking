@@ -17,7 +17,7 @@ The site is implemented from scratch in HTML and CSS. Also jQuery was used for n
 
 ### About the project
 
-##### We used:
+#### We used:
 - HTML
 - CSS
 - JavaScript
@@ -34,4 +34,4 @@ We also made a responsive web design so you can use it on your phone. For naviga
 
 ### How navigation works
 
-![](img/markdown/video.gif)
+<p align="center"> <img  src="img/markdown/video.gif"></p>
