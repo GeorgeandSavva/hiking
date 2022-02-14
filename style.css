@@ -717,6 +717,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
 }
 
+.about__col:hover {
+    text-decoration: underline;
+}
+
+
 /* Burger */
 .burger {
     display: none;
@@ -1156,7 +1161,9 @@ h1, h2, h3, h4, h5, h6 {
     /*intro*/
     .intro {
         height: 750px;
+        padding-top: 260px;
     }
+
     .intro__title {
         font-size: 50px;
     } 
